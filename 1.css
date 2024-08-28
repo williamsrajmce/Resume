@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+article {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+article h2 {
+    margin-top: 0;
+}
+
+.date {
+    color: gray;
+    font-size: 0.9em;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.skill-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: black;
+    text-transform: uppercase;
+    margin: 20px;
+
+}
+.skill-bar {
+    height: 10px;
+    background: black;
+    border-radius: 3px;
+    position: relative;
+
+}
+
+.skill-per{
+    height: 10px;
+    background: rgb(10, 34, 36);
+    border-radius: 3px;
+    position: relative;
+    animation: fillbars 2.5s 1;
+}
+
+
+
+.skill-per::before{
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background: white;
+    border-radius: 4px;
+    font-size: 12px;
+    top: -35px;
+    right: 0;
+    transform: translate(50%);
+}
+
+.skill-per::after{
+    content: "";
+    position: absolute;
+    background: black;
+    width: 10px;
+    height: 10px;
+    top: -20px;
+    right: 0;
+    transform: translate(50%) rotate(45deg);
+    border-radius: 2px;
+}
+
+
+@keyframes fillbars{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
